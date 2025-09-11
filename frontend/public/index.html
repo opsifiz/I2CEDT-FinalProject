@@ -12,6 +12,10 @@
             <h4>Computer Programming Practice Recommender</h4>
         </div>
     </div>
+    <!-- ปุ่มค้นหา -->
+    <div id="queryToggle" class="search-btn">
+        <img src="https://www.svgrepo.com/show/356535/search-button.svg" alt="Search" />
+    </div>
     <div class="container">
         <section class="content">
             <div class="inputs">
@@ -52,39 +56,62 @@
                 </h4>
             </div>
             <br>
-            <div class="inputs">
-                <div class="user-input">
-                    <label for="algorithm" class="user-choice">Algorithm</label>
-                    <select name="algorithm" id="algorithm-query">
-                        <option value="none" selected>ไม่มี</option>
-                        <option value="anything">อะไรก็ได้</option>
-                        <option value="bfs">BFS</option>
-                        <option value="dfs">DFS</option>
-                        <option value="dp">Dynamic Programming</option>
-                        <option value="bs">Binary Search</option>
-                    </select>
-                </div>
-                <div class="user-input">
-                    <label for="time-complexity" class="user-choice">Time Complexity</label>
-                    <select name="time-complexity" id="time-complexity-query">
-                        <option value="anything" selected>อะไรก็ได้</option>
-                        <option value="1">O(1)</option>
-                        <option value="logn">O(log n)</option>
-                        <option value="n">O(n)</option>
-                        <option value="nlogn">O(n log n)</option>
-                        <option value="n2">O(n**2)</option>
-                        <option value="n3">O(n**3)</option>
-                        <option value="n4">O(n**4)</option>
-                    </select>
-                </div>
-                <div class="query" id="query">
-                    <button>Submit</button>
-                </div>
-            </div>
+            <br>
+            <br>
             <div class="center">
                 <textarea name="result" id="llm-message" class="text-input" placeholder="..." readonly></textarea>
             </div>
         </section>
+    </div>
+        <!-- The Modal -->
+    <div id="queryModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close" id="closeQueryModal">&times;</span>
+            <p class="modal-title">Search Previous Conversation</p>
+            <hr>
+            <div class="center">
+                <div class="inputs">
+                    <div class="user-input">
+                        <label for="algorithm" class="user-choice">Algorithm</label>
+                        <select name="algorithm" id="algorithm-query">
+                            <option value="none" selected>ไม่มี</option>
+                            <option value="anything">อะไรก็ได้</option>
+                            <option value="bfs">BFS</option>
+                            <option value="dfs">DFS</option>
+                            <option value="dp">Dynamic Programming</option>
+                            <option value="bs">Binary Search</option>
+                        </select>
+                    </div>
+                    <div class="user-input">
+                        <label for="time-complexity" class="user-choice">Time Complexity</label>
+                        <select name="time-complexity" id="time-complexity-query">
+                            <option value="anything" selected>อะไรก็ได้</option>
+                            <option value="1">O(1)</option>
+                            <option value="logn">O(log n)</option>
+                            <option value="n">O(n)</option>
+                            <option value="nlogn">O(n log n)</option>
+                            <option value="n2">O(n**2)</option>
+                            <option value="n3">O(n**3)</option>
+                            <option value="n4">O(n**4)</option>
+                        </select>
+                    </div>
+                    <div class="query" id="query">
+                        <button>Submit</button>
+                    </div>
+                </div>
+            </div>
+            <div class="center">
+                <textarea name="prompt" id="prompt-query" class="modal-text-input" placeholder="Prompt ที่เคยพิมพ์"></textarea>
+            </div>
+            <br>
+            <section class="queryResults">
+                <!-- <textarea id="" class="modal-text-input" readonly></textarea> -->
+                <!-- <textarea id="" class="modal-text-input" readonly></textarea> -->
+                <!-- <textarea id="" class="modal-text-input" readonly></textarea> -->
+                <!-- <textarea id="" class="modal-text-input" readonly></textarea> -->
+            </section>
+        </div>
     </div>
 </body>
 <footer>
