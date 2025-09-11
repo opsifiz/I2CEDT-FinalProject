@@ -1,0 +1,63 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    margin: 0;
+    width: 80%;
+}
+
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content{
+    position: absolute;
+    width: 100%;
+}
+
+.top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    background-color: antiquewhite;
+    top: 0;
+}
+
+.top-mid{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.inputs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-input{
+    margin: 20px;
+}
+
+.user-choice{
+    padding: 10px;
+}
+
+.text-input, .text-output{
+    padding: 0px;
+    position: relative;
+    width: 680px;
+    height: 240px;
+    resize: none;
+}
+
+.reply{
+    margin-left: 30%;
+    padding: 15px;
+    position: absolute;
+}
