@@ -9,8 +9,7 @@ A simple full-stack project with **Frontend (Express + static files)** and **Bac
 for frontend
 ```bash
 cd frontend
-npm init -y
-npm install express
+npm i
 npm start
 ```
 
@@ -19,8 +18,7 @@ npm start
 for backend
 ```bash
 cd backend
-npm init -y
-npm install express dotenv mongoose cors
+npm i
 npm start
 ```
 
