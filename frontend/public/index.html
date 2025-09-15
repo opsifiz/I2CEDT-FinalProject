@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>CPPR</title>
 </head>
@@ -12,12 +13,15 @@
             <h4>Computer Programming Practice Recommender</h4>
         </div>
     </div>
-    <!-- ปุ่มค้นหา -->
+
+    <!-- Floating search button -->
     <div id="queryToggle" class="search-btn">
         <img src="https://www.svgrepo.com/show/356535/search-button.svg" alt="Search" />
     </div>
+
     <div class="container">
         <section class="content">
+            <!-- User Input -->
             <div class="inputs">
                 <div class="user-input">
                     <label for="algorithm" class="user-choice">Algorithm</label>
@@ -50,22 +54,19 @@
             <div class="center">
                 <textarea name="prompt" id="prompt-input" class="text-input"></textarea>
             </div>
+
+            <!-- LLM Reply -->
             <div class="reply">
-                <h4 style="margin: 0; padding: 0;">
-                    LLM Reply :
-                </h4>
+                <h4>LLM Reply :</h4>
             </div>
-            <br>
-            <br>
-            <br>
             <div class="center">
-                <textarea name="result" id="llm-message" class="text-input" placeholder="..." readonly></textarea>
+                <pre name="result" id="llm-message" class="text-input" placeholder="..." readonly></pre>
             </div>
         </section>
     </div>
-        <!-- The Modal -->
+
+    <!-- Modal -->
     <div id="queryModal" class="modal">
-        <!-- Modal content -->
         <div class="modal-content">
             <span class="close" id="closeQueryModal">&times;</span>
             <p class="modal-title">Search Previous Conversation</p>
@@ -96,7 +97,7 @@
                             <option value="n4">O(n**4)</option>
                         </select>
                     </div>
-                    <div class="query" id="query">
+                    <div class="user-input" id="query">
                         <button>Submit</button>
                     </div>
                 </div>
@@ -105,16 +106,10 @@
                 <textarea name="prompt" id="prompt-query" class="modal-text-input" placeholder="Prompt ที่เคยพิมพ์"></textarea>
             </div>
             <br>
-            <section class="queryResults">
-                <!-- <textarea id="" class="modal-text-input" readonly></textarea> -->
-                <!-- <textarea id="" class="modal-text-input" readonly></textarea> -->
-                <!-- <textarea id="" class="modal-text-input" readonly></textarea> -->
-                <!-- <textarea id="" class="modal-text-input" readonly></textarea> -->
-            </section>
+            <section class="queryResults"></section>
         </div>
     </div>
-</body>
-<footer>
+
     <script type="module" src="scripts/main.js"></script>
-</footer>
+</body>
 </html>
