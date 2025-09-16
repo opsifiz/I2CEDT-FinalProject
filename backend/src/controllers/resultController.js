@@ -82,10 +82,10 @@ export const filterResult = async (req, res) => {
         const {algorithm, timeComplexity, subMessage} = req.body;
         
         let filter = {};
-        if(algorithm && algorithm !== "any"){
+        if(algorithm && algorithm !== "anything"){
             filter.algorithm = algorithm;
         }
-        if(timeComplexity && timeComplexity !== "any"){
+        if(timeComplexity && timeComplexity !== "anything"){
             filter.timeComplexity = timeComplexity;
         }
         if (subMessage && subMessage !== "-") {
